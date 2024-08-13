@@ -1,0 +1,106 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.perfil {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 380px;
+    padding: 40px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.perfil:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+.perfil img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #007BFF;
+    transition: border-color 0.3s ease;
+}
+.perfil img:hover {
+    border-color: #0056b3;
+}
+.perfil h1 {
+    margin: 20px 0 10px;
+    font-size: 2.4em;
+    color: #333;
+    font-weight: 600;
+}
+.perfil p {
+    margin: 0;
+    color: #555;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+.social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    margin: 8px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    background-color: #007BFF;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1em;
+}
+.social-link:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+.social-link::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.social-link.facebook::before {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg');
+}
+.social-link.whatsapp::before {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg');
+}
+.social-link.instagram::before {
+background-image: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png');
+}
+
+@media (max-width: 600px) {
+    .perfil {
+        width: 100%;
+        padding: 20px;
+    }
+    .perfil img {
+        width: 120px;
+        height: 120px;
+    }
+    .perfil h1 {
+        font-size: 2em;
+    }
+    .social-link {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+}
